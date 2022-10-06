@@ -28,13 +28,12 @@ const JoinRoomForm = ({uuid, socket, setUser}) => {
         <Container component="main" maxWidth="xs">
             <Box
                 sx={{
-                    marginTop: 8,
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                 }}
             >
-                <Box component="form" sx={{ mt: 1 }}>
+                <Box component="form" sx={{marginTop: 4}}>
                     <TextField
                         margin="normal"
                         required
@@ -59,7 +58,7 @@ const JoinRoomForm = ({uuid, socket, setUser}) => {
                         type="submit"
                         fullWidth
                         variant="contained"
-                        sx={{ mt: 9.5, mb: 2 }}
+                        sx={{ mt: 7, mb: 2 }}
                         onClick={joinRoom}
                     >
                         Join

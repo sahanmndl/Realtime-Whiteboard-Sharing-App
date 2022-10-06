@@ -15,8 +15,10 @@
     "@mui/material": "^5.9.3",
     "bootstrap": "^5.2.0",
     "react": "^18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
+    "react-toastify": "^9.0.8",
     "roughjs": "^4.5.2",
     "socket.io-client": "^4.5.1"
   },

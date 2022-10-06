@@ -2,6 +2,7 @@ import React from "react"
 import { Container, Box, TextField, Button } from "@mui/material"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import {CopyToClipboard} from 'react-copy-to-clipboard'
 
 const CreateRoomForm = ({uuid, socket, setUser}) => {
 
@@ -26,9 +27,7 @@ const CreateRoomForm = ({uuid, socket, setUser}) => {
 
     return (
         <Container component="main" maxWidth="xs">
-            <Box
-                sx={{
-                    marginTop: 8,
+            <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
@@ -54,8 +53,7 @@ const CreateRoomForm = ({uuid, socket, setUser}) => {
                         name="room-code"
                         value={roomId}
                     />
-                    <Box
-                        sx={{
+                    <Box sx={{
                             display: 'flex',
                             flex: 1,
                             flexDirection: 'row',
@@ -71,13 +69,11 @@ const CreateRoomForm = ({uuid, socket, setUser}) => {
                         >
                             Generate
                         </Button>
-                        <Button
-                            fullWidth
-                            variant="outlined"
-                            color='error'
-                        >
-                            Copy
-                        </Button>
+                        <CopyToClipboard text={roomId}>
+                            <Button fullWidth variant="outlined" color='error'>
+                                Copy
+                            </Button>
+                        </CopyToClipboard>
                     </Box>
                     <Button
                         type="submit"
